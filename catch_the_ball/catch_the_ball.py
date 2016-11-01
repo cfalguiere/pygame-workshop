@@ -1,5 +1,5 @@
 #
-# Faire rebondir une balle
+# Détecter la position de la souris et déplacer la balle avec la souris
 #
 # initialise pygame
 import sys, pygame
@@ -16,8 +16,6 @@ screen = pygame.display.set_mode(window_size)
 ball = pygame.image.load("ball.bmp")
 ballrect = ball.get_rect()
 
-mem_mouse_pos = [ -1, -1]
-
 # boucle infinie
 while True:
     for event in pygame.event.get():
@@ -25,8 +23,7 @@ while True:
         if event.type == pygame.QUIT: sys.exit()
         # pour la souris
         if event.type == pygame.MOUSEMOTION:
-          mouse_pos = pygame.mouse.get_pos()
-          ballrect.center = mouse_pos
+          ballrect.center = pygame.mouse.get_pos()
 
     # reaffiche le fond et la balle
     screen.fill(color_black)
