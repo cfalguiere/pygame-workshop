@@ -45,13 +45,13 @@ while running:
            paused = False
         if event.type == pygame.KEYDOWN:
            paused = False
-           if event.key == pygame.K_Q:
+           if event.key == pygame.K_q:
               ping_speed_vector = [0, -20]
-           if event.key == pygame.K_W:
+           if event.key == pygame.K_w:
               ping_speed_vector = [0, 20]
-           if event.key == pygame.K_J:
+           if event.key == pygame.K_j:
               pong_speed_vector = [0, -20]
-           if event.key == pygame.K_N:
+           if event.key == pygame.K_n:
               pong_speed_vector = [0, 20]
         if event.type == pygame.KEYUP:
               ping_speed_vector = [0, 0]
