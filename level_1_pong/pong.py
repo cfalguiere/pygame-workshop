@@ -16,6 +16,7 @@ color_white = ( 255, 255, 255 )
 labelFont = pygame.font.SysFont("Helvetica", 32)
 
 # charge l'image de la balle
+board_rect = pygame.Rect(0, 10, width, height - 2*10)
 ball_rect = pygame.Rect(0, 0, 28, 28)
 ball_rect.center = (width/2, height/2)
 ping_rect = pygame.Rect(10, 0, 15, 60)
@@ -85,7 +86,7 @@ while running:
           ball_rect.center = ( width/2, height/2 )
           ball_speed_vector = ball_speed_vectors[ random.randint(0,3) ]
           paused = True
-      if ball_rect.top < 0 or ball_rect.bottom > height:
+      if ball_rect.top < 10 or ball_rect.bottom > height - 10:
           ball_speed_vector[Y] = -ball_speed_vector[Y]
     pygame.draw.circle(game_surface, color_white, ball_rect.center, round(ball_rect.width/2))
 
