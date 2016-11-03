@@ -14,7 +14,7 @@ Y = 1
 color_white = ( 255, 255, 255 )
 game_surface = pygame.display.set_mode(window_size)
 
-# charge l'image de la balle
+# charge l'image de la souris
 mouse_image = pygame.image.load("mouse_mini.png")
 mouse_rect = mouse_image.get_rect()
 
@@ -24,7 +24,6 @@ grab = False
 mouse_image_pos = [ width/2, height/2 ]
 while running:
     for event in pygame.event.get():
-        print (event)
         mouse_pos = pygame.mouse.get_pos()
         # pour le bouton de fermeture de la fenêtre, quitte le programme
         if event.type == pygame.QUIT: running = False
